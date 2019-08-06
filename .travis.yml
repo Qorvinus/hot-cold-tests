@@ -2,6 +2,13 @@ language: node_js
 node_js: node
 cache:
   directories:
-    - node_modules
+  - node_modules
 env:
-  - CI=true
+- CI=true
+deploy:
+  provider: heroku
+  api_key:
+    secure: P47kycQLsbJhB/Dp6F/V55FKqW0WSLe2BwbOi0Irduk98hsWnYr/V4YGA+FMKf4kw9YqX/cJ/xm+9UJSi/3dh14paNDg56J/el9n8Yifo+inI17A2kkXpn5cf6vgVTafMSPrCTEquI7Ada83qprcgx1EQzFN+Bb8gPgGydVL4tMNLg7pt4kMZay4FSKhDamt6sDjG9rVaaslWZeASBjF8xf4EJhxFxsUGoSsW7BaAzMGm5JfpB3rLsUiEqOWXXFZHCVTKFLEtTfOERynKx6QE11YwqrT5S0s297bDAm+XdAnWMBg8HXKBnXbR7bgm93/crZ1f8b8aFj5GYgR3vZrmwD6l8d82L6gWwJOL+64EWkKEU6v1A3uDypfFd1PccUAxSRKw6c1iwWRvPM/9AAb57UrxlThJVGyKhp+jqKUB7umzdsfnpz2m+TnSIwHLmAj0X57N0dZjhamS+f5T/+ZJeXDF2pCktCBAEh6pjvgs8dsRaDW4Xw6x04aCwTtNnnSFWkHAlRJTWdgcUKQGpYJ7+Bil6xJzIqcH0++gYi/ogjK2FPlw4pbIfqCp4WY6rNju6vaq5kDpxx+G+g9zZ8XCLtESG6697CaD1bjn5/KlYMXTss1bryZfWCRnBsYWuzsVSjdbFjOpSXCeWrD1E8xW+clu7AmOPiq2H5QXzGEdUg=
+  app: hot-cold-tests
+  on:
+    repo: Qorvinus/hot-cold-tests
